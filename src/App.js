@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Toolbar from './component/Toolbar'
-import Content from './component/Content'
-
 
 class App extends Component {
 
@@ -31,8 +29,6 @@ class App extends Component {
           <Toolbar
             currentTab={this.state.currentTab}
             changeTab={this.changeTab}/>
-          <Content
-            currentTab={this.state.currentTab}/>
         </div>  
       </div>
     );

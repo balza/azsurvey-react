@@ -1,34 +1,28 @@
 import React, { Component } from 'react';
-import Tab from '../component/Tab';
-
-const tabs = [
-  {id: 1, label: 'hello', url: '/hello'},
-  {id: 2, label: 'survey', url: '/survey'}
-];
+import { Tab, Tabs } from 'react-bootstrap';
+import Profile from '../component/Profile';
+import Survey from '../component/Survey';
 
 class Toolbar extends Component {
 
-  handleClick(tab){
-    console.log('Toolbar handleClick');
-    console.log(tab);
-    this.props.changeTab(tab);
+  constructor(props) {
+    super(props);
+    this.handleSelect = this.handleSelect.bind(this);
+    this.state = {
+      key : 1
+    };
+  }  
+
+  handleSelect(key) {
+    this.setState({key});
   }
 
   render() {
     return (
-        <ul className="nav nav-tabs">
-          {
-            tabs.map((tab) => 
-              <Tab
-                handleClick={this.handleClick.bind(this, tab)} 
-                key={tab.id} 
-                label={tab.label}
-                url={tab.url}
-                isCurrent={(this.currentTab === tab.id)}
-              />
-            )
-          }
-        </ul>
+      <Tabs activeKey={this.state.key} onSelect={this.handleSelect} id="controlled-tab-example">
+        <Tab eventKey={1} title="Profile"><Profile /></Tab>
+        <Tab eventKey={2} title="Survey"><Survey /></Tab>
+      </Tabs>
     );
   }
 }
