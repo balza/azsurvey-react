@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Toolbar from './component/Toolbar'
+import { Tab, Tabs } from 'react-bootstrap';
+import Profile from './component/Profile';
+import Survey from './component/Survey';
+import Administration from './administration/Administration';
 
 class App extends Component {
 
@@ -12,9 +15,6 @@ class App extends Component {
   }
 
   changeTab(tab) {
-    console.log("App");
-    console.log("---");
-    console.log(tab);
     this.setState({ currentTab: tab.id });
   }
 
@@ -26,9 +26,11 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <div>
-          <Toolbar
-            currentTab={this.state.currentTab}
-            changeTab={this.changeTab}/>
+          <Tabs activeKey={this.state.key} onSelect={this.changeTab} id="controlled-tab-example">
+            <Tab eventKey={1} title="Profile"><Profile /></Tab>
+            <Tab eventKey={2} title="Survey"><Survey /></Tab>
+            <Tab eventKey={3} title="Administration"><Administration /></Tab>
+          </Tabs>
         </div>  
       </div>
     );
