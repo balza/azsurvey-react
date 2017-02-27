@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Question from '../component/Question';
 
 const questions = [
-  {id: 'q1', text: 'Ti piacciono i fiori?'},
-  {id: 'q2', text: 'Vuoi bene alla mamma?'}
+  {key: 1, id: 'q1', text: 'Ti piacciono i fiori?'},
+  {key: 2, id: 'q2', text: 'Vuoi bene alla mamma?'}
 ];
 
 class Survey extends Component {
@@ -14,7 +14,8 @@ class Survey extends Component {
         {
           questions.map((question) =>
             <Question
-                id={question.id}
+                key={question.key}
+                name={question.id}
                 text={question.text}
             />
           )

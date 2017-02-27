@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import toolbar form 'toolbar'
+import question from 'question'
 
 const rootReducer = combineReducers({
-  toolbar
+  question
 })
 
 export default rootReducer

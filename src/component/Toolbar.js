@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import Profile from '../component/Profile';
 import Survey from '../component/Survey';
+import Administration from '../component/Administration';
 
 class Toolbar extends Component {
 
@@ -22,6 +23,7 @@ class Toolbar extends Component {
       <Tabs activeKey={this.state.key} onSelect={this.handleSelect} id="controlled-tab-example">
         <Tab eventKey={1} title="Profile"><Profile /></Tab>
         <Tab eventKey={2} title="Survey"><Survey /></Tab>
+        <Tab eventKey={3} title="Administration"><Administration /></Tab>
       </Tabs>
     );
   }

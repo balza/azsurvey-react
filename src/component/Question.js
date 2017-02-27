@@ -20,7 +20,7 @@ class Question extends Component {
     const { rating } = this.state;
     return(
       <div>
-        {this.props.text} <StarRatingComponent name={this.props.id} value={rating} onStarClick={this.onStarClick} starCount={10}/> {rating}
+        {this.props.text} <StarRatingComponent name={this.props.name} value={rating} onStarClick={this.onStarClick} starCount={10}/> {rating}
       </div>
     );
   }
