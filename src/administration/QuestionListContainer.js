@@ -3,7 +3,7 @@ import { removeQuestion } from '../actions'
 import QuestionList from './QuestionList'
 
 const mapStateToProps = (state) => ({
- questions : state.questions
+  questions : state.questions
 })
 
 const mapDispatchToProps = {

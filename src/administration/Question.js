@@ -1,9 +1,12 @@
 import React, { PropTypes } from 'react'
-import { Glyphicon } from 'react-bootstrap';
+import { Button, Glyphicon } from 'react-bootstrap';
 
 const Question = ({ onClick, text }) => (
   <li>
-    {text} <Glyphicon glyph='glyphicon-minus' onClick='onClick' /> 
+    {text} 
+    <Button onClick={onClick}>
+      <Glyphicon glyph='glyphicon glyphicon-minus'/>
+    </Button>
   </li>
 )
 

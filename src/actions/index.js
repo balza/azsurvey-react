@@ -8,5 +8,6 @@ export const addQuestion = (text) => ({
 
 export const removeQuestion = (text) => ({
   type: 'REMOVE_QUESTION',
+  id: text
 })
 
