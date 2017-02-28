@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddQuestion from './AddQuestion';
+import QuestionListContainer from './QuestionListContainer';
 
 class Administration extends Component {
   render(){
@@ -7,6 +8,7 @@ class Administration extends Component {
       <div>
         Administration
         <AddQuestion />
+        <QuestionListContainer />
       </div>
     );
   }

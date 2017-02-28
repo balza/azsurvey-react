@@ -13,7 +13,7 @@ const QuestionList = ({ questions, onQuestionClick }) => (
   </ul>
 )
 
-TodoList.propTypes = {
+QuestionList.propTypes = {
   questions: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired

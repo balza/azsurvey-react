@@ -7,7 +7,7 @@ const Question = ({ onClick, text }) => (
   </li>
 )
 
-Todo.propTypes = {
+Question.propTypes = {
   onClick: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired
 }
